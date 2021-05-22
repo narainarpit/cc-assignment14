@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Channels</title>
+</head>
+<body>
+    <h4 style="float: right" th:text="|User : ${user.userName}|"></h4>
+    <h3>Channels</h3>
+    <tr th:each="channel : ${channels}">
+        <a href="comments.html"
+           th:href="@{channels/detail/id/{channelId}(channelId=${channel.id})}">
+            <span th:text="${channel.name}"></span>
+        </a>
+    </tr>
+
+</body>
+</html>

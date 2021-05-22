@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Channel Detail</title>
+</head>
+<body>
+<div>
+    <h4 style="float: right" th:text="|User : ${user.userName}|"></h4>
+    <div>
+        <div id="postedMessage">
+        </div>
+    </div>
+    <textarea th:textara id="messageText" onkeyup="return textAreaKeyPress(event)" name="messageText" rows="4" cols="50">
+    </textarea>
+</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    window.channelId = /*[[${channel.id}]]*/'1'
+    /*]]>*/
+</script>
+<script type="text/javascript" src="/js/channelDetail.js"></script>
+</body>
+</html>
